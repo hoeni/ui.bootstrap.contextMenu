@@ -23,7 +23,7 @@ angular.module('ui.bootstrap.contextMenu', [])
                 var $a = $('<a>');
                 $a.attr({ tabindex: '-1', href: '#' });
                 var text = typeof item[0] == 'string' ? item[0] : item[0].call($scope, $scope, event, model);
-                $a.text(text);
+                $a.html(text);
                 $li.append($a);
                 var enabled = angular.isDefined(item[2]) ? item[2].call($scope, $scope, event, text, model) : true;
                 if (enabled) {
